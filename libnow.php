@@ -5,6 +5,8 @@ require_once "liblog.php";
 class MenuNow extends MenuLog{
   public __construct( $__host, $__user, $__passwd, $__uid ){
     parent::__construct( $__host, $__user, $__passwd, $__uid );
+    $query = "CREATE TABLE UN".$__uid." ( Menu_Name text, Kind_Name varchar(10), Date DATE );";
+    $result = $this->_db_throw_query( "Users_Geo", $query );
   }
 
   /* public method */
